@@ -76,6 +76,20 @@ else:
     else: 
         print(a,c,b)
 '''
+# Improved version (variable swapping)
+'''
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a>b:
+    a,b = b,a
+if a>c:
+    a,c = c,a
+if b>c:
+    b,c = c,b
+print(a,b,c)
+'''
 
 #6
 '''
@@ -97,6 +111,20 @@ else:
         print(c, b, a)
     else: 
         print(b, c, a)
+'''
+# Improved version (variable swapping)
+'''
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a<b:
+    a,b = b,a
+if a<c:
+    a,c = c,a
+if b<c:
+    b,c = c,b
+print(a,b,c)
 '''
 
 #7
@@ -146,6 +174,7 @@ else:
 '''
 
 #9
+'''
 a = int(input())
 b = int(input())
 c = int(input())
@@ -164,6 +193,10 @@ else:
         print(f'The smallest number is {a}.')
     else: 
         print(f'The smallest number is {a}.')
+'''
+#10
+
+#11
 
 #12
 '''
@@ -181,7 +214,6 @@ elif b == c:
 else:
     print(f'each number is unique.')
 '''
-
 
 #13
 '''
