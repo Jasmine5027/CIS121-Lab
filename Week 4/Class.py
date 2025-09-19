@@ -5,6 +5,12 @@ while num <= 10:
     print(num)
     num += 1
 '''
+'''
+#help(range)
+for num in range(1,10+1):
+    print(num)
+'''
+
 
 #even number
 '''
@@ -14,6 +20,11 @@ while num <= 10:
         print(num)
     num += 1
 '''
+'''
+for num in range(2,11,2):
+    print(num)
+'''
+
 
 #odd number from 5 to user give:
 '''
@@ -24,7 +35,13 @@ while num <= max_num:
         print(num)
     num += 1
 '''
-    
+'''
+max = int(input('Enter you number:'))
+for num in range(5,max+1,2):
+    print(num)
+'''
+
+
 #(continue) even number not%3=0
 '''
 num = 0
@@ -36,6 +53,13 @@ while num < 50:
         else:
             print(num)
     num += 1
+'''
+'''
+for num in range (2,50,2)
+    if num %3 == 0:
+        continue
+    else:
+        print(num)
 '''
 
 
@@ -53,3 +77,13 @@ while True:
 
 print("Total =", total)
 '''
+
+
+
+
+#String slicing in Python uses a left-closed, right-open interval [start:end ).
+x = 'hello world'
+print(x[2:8])
+
+
+
