@@ -159,18 +159,18 @@ c = int(input())
 
 if a > b:
     if b > c:
-        print(f'The laegest number is {a}.')
+        print(f'The largest number is {a}.')
     elif c > a:
-        print(f'The laegest number is {c}.')
+        print(f'The largest number is {c}.')
     else:
-        print(f'The laegest number is {a}.')
+        print(f'The largest number is {a}.')
 else:
     if a > c:
-        print(f'The laegest number is {b}.')
+        print(f'The largest number is {b}.')
     elif c > b:
-        print(f'The laegest number is {c}.')
+        print(f'The largest number is {c}.')
     else: 
-        print(f'The laegest number is {b}.')
+        print(f'The largest number is {b}.')
 '''
 
 #9
@@ -197,6 +197,21 @@ else:
 #10
 
 #11
+from random import randint
+
+coin = randint(0, 1)   
+guess = input("Guess Heads or Tails: ")
+
+if coin == 0:
+    result = "Heads"
+else:
+    result = "Tails"
+
+if guess == result:
+    print("Correct.", result)
+else:
+    print("Incorrect.", result)
+
 
 #12
 '''
@@ -225,7 +240,7 @@ if 0 <= highway <= 99:
     else:
         print(f'highway {highway} runs east/west.')
 elif 100 <= highway <= 999:
-    a = highway % 100
+    a = highway % 100                                       #reminder express
     if a == 0:
         print('Invalid highway number.')
     elif a % 2 == 1:
