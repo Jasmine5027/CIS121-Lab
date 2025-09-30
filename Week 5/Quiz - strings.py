@@ -57,12 +57,14 @@ def reverse_string(word):
 # word[-1:-len(word)-1:-1] can simplified as word[::-1]
 
 '''
+'''
  h     e     l     l     o
  0     1     2     3     4      len(word): positive index
 -5    -4    -3    -2    -1     -len(word): negitive index
 
 -len(word)   -> 'h'
 -len(word)-1 -> 'h'-1
+'''
 '''
 
 word = input('Enter your word: ')
