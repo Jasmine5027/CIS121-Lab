@@ -202,6 +202,69 @@ print(convert_kunts(kunts))
 
 
 
+#12
+'''
+def convert_bronze(bronze):
+  gold = bronze // (20*15)
+  bronze %= (20*15)
+
+  silver = bronze // 15
+  bronze %= 15
+
+  result = []
+
+  if gold>0:
+    result.append(f'{gold} gold')
+  if silver>0:
+    result.append(f'{silver} silver')
+  if bronze>0: result.append(f'{bronze} bronze')
+
+  return ' '.join(result)
+
+bronze = int(input('Enter bronze coins: '))
+
+print(convert_bronze(bronze))
+'''
+
+
+
+
+#13
+'''
+from random import randint
+value = randint(0,1) #inclusive of both endpoints
+
+def toss_cion(guess):
+
+  return 'Correct!' if guess == value else 'Incorrect!'
+
+
+guess = int(input('Enter your guess (0 or 1): '))
+
+print(toss_cion(guess))
+'''
+
+
+
+
+#14
+'''
+from random import randint
+value = randint(0,9) #inclusive of both endpoints
+
+def guess_num(guess):
+  result = 'odd' if value%2 == 1 else 'even'
+  return 'Correct!' if guess == result else 'Incorrect!'
+
+
+guess = input('Enter your guess: ')
+
+print(guess_num(guess))
+'''
+
+
+
+
 #15
 '''
 def count_duplicates (num_1,num_2,num_3):
@@ -307,7 +370,7 @@ print(serve_coffee(coffee))
 '''
 def find_winner(player_1,player_2):
   if player_1 == player_2:
-    return 'It’s a tie!'
+    return "It's a tie!"
   else:
     if player_1 == 'Rock':
      return 'Player 1 wins!' if player_2 == 'Scissors' else 'Player 2 wins!'
@@ -395,24 +458,200 @@ print(find_relation(role))
 
 
 
+#24
+'''
+def skip_letter(word):
+  return word[1::2]
+
+word = input('Enter word: ')
+
+print(skip_letter(word))
+'''
 
 
 
 
+#25
+'''
+def skip_letter(word):
+  #data cleaning
+  word = word.replace(' ','')   #string.replace('old', 'new') notice to use parentheses
+  return word[::2]
+word = input('Enter word: ')
+
+print(skip_letter(word))
+'''
 
 
 
 
+#26
+'''
+def output_even(smaller_num,larger_num):
+  if smaller_num %2 == 1:
+    smaller_num += 1
+  mylist = []
+  for x in range(smaller_num,larger_num+1,2):
+    mylist.append(x)
+  return mylist
+
+
+smaller_num = int(input('Enter smaller_num: '))
+larger_num = int(input('Enter larger_num: '))
+
+print(output_even(smaller_num,larger_num))
+'''
+#26 simplified version: guaranteed always even + list(iterable) / list comprehension
+'''
+def output_even(smaller_num,larger_num):
+  start = smaller_num + (smaller_num %2)    # guaranteed always even
+'''
+'''
+  list() Function: list(iterable)
+
+  list(range(5))           # [0, 1, 2, 3, 4]
+  list("abc")              # ['a', 'b', 'c']
+  list((1, 2, 3))          # [1, 2, 3]
+'''
+'''
+  return list(range(start,larger_num+1,2))
+
+  #list comprehension: [expression for item in iterable if condition]
+  return [x for x in range(start,larger_num+1,2)]
+
+
+smaller_num = int(input('Enter smaller_num: '))
+larger_num = int(input('Enter larger_num: '))
+
+print(output_even(smaller_num,larger_num))
+'''
 
 
 
 
+#27
+'''
+def odd_sum(smaller_num,larger_num):
+  start = smaller_num + (1 - smaller_num%2)   # guaranteed always odd
+  total = 0
+  for x in list(range(start,larger_num+1,2)):
+    total += x
+  return total
+
+smaller_num = int(input('Enter smaller_num: '))
+larger_num = int(input('Enter larger_num: '))
+
+print(odd_sum(smaller_num,larger_num))
+'''
 
 
 
 
+#28
+'''
+def create_word():    #no arguments
+  letter_list = []
+  letter = input('Enter a letter (or type done): ')
+  while letter != 'done':
+    letter_list.append(letter)
+    letter = input('Enter a letter (or type done): ')
+  return ''.join(letter_list)
+
+print(create_word())
+'''
 
 
+
+
+#29
+'''
+def sum_loop():
+  total = 0
+  num = int(input('Enter an integer: '))
+  while num >= 0:
+    total += num
+    num = int(input('Enter an integer: '))
+  return total
+
+print(sum_loop())
+'''
+
+
+
+
+#30
+'''
+def hailstone_seq(n):
+  result = [n]
+  while n!=1:
+    n = n/2 if n%2==0 else (n*3)+1
+    result.append(n)
+  return result
+
+n = int(input('Enter a positive integer: '))
+
+print(hailstone_seq(n))
+'''
+
+
+
+
+#31
+'''
+def find_factors(num):
+  return [x for x in range(1,num+1) if num % x == 0]
+
+num = int(input('Enter number: '))
+
+print(find_factors(num))
+'''
+
+
+
+
+#32
+'''
+def design_run(width,length,pattern):
+  collection = []
+  for x in range(1,length+1):
+    collection.append(pattern * width)
+  return '\n'.join(collection)    #'\n' means line break
+        #"separator".join(list)
+
+
+width = int(input('Enter width: '))
+length = int(input('Enter length: '))
+pattern = input('Enter : ')
+
+
+print(design_run(width,length,pattern))
+'''
+
+
+
+
+#33
+'''
+def square_sum(num):
+  return sum((x**2) for x in range(1,num+1)) if num>0 else 'Unknown'
+
+num = int(input('Enter number: '))
+
+print(square_sum(num))
+'''
+
+
+
+
+#34
+'''
+def cube_sum(num):
+  return sum((x**3) for x in range(1,num+1)) if num>0 else 'Unknown'
+
+num = int(input('Enter number: '))
+
+print(cube_sum(num))
+'''
 
 
 

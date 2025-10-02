@@ -1,3 +1,4 @@
+'''
 def every_word(sentence):
   word = []
   collection = ''
@@ -12,6 +13,16 @@ def every_word(sentence):
     word.append(collection)
 
   return word
+
+sentence = input('Enter your sectence:')
+
+print(every_word(sentence))
+'''
+
+
+#simplified version: string.split(separator, max_split_times)
+def every_word(sentence):
+  return sentence.split()   #string.split(separator, max_split_times)
 
 sentence = input('Enter your sectence:')
 
