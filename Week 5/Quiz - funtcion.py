@@ -268,10 +268,10 @@ print(guess_num(guess))
 #15
 '''
 def count_duplicates (num_1,num_2,num_3):
-  if num_1==num_2 or num_2==num_3 or num_1==num_3:
-    count=2
-  elif num_1==num2==num3:
+  if num_1==num_2==num_3:
     count=3
+  elif num_1==num_2 or num_2==num_3 or num_1==num_3:
+    count=2
   else:
     count=0
   return count
