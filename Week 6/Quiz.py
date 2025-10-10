@@ -186,7 +186,7 @@ print(war_of_number(number))
 '''
 def add_list(lyst1,lyst2):
   lyst3 = []
-  for x in range(0,):  #the item amount of list
+  for x in range(0,len(lyst1)):  #the item amount of list
     lyst3.append(lyst1[x] + lyst2[x])
   return lyst3
 
